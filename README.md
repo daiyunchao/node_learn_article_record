@@ -23,3 +23,5 @@ NATS官方文档: https://nats.io/documentation/
 nodejs cluster模块分析 https://segmentfault.com/a/1190000011737574 (从代码层面讲的,比较全面,回到了一个问题,为什么多个work进程可以同时监听相同的端口号)
 
 818 NodeJS的Cluster模块 https://www.jianshu.com/p/a1abf405edfc
+
+使用 pm2 啟動 Node.js cluster 以提升效能 https://larrylu.blog/nodejs-pm2-cluster-455ffbd7671(写的很简单,但pm2 去做cluster会方便很多,但使用pm2 启动同一套代码,监听不同的端口,在nginx上配置负载均衡效果应该是一样的,毕竟Cluster的目的是用多进程的方式去利用服务器的CPU,在pm2上启动多个进程感觉跟简单一些)
