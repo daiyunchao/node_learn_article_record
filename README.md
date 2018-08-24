@@ -15,3 +15,11 @@
 日期:2018年8月23日
 
 NATS官方文档: https://nats.io/documentation/
+
+## Node的多线程多进程
+
+日期:2018年8月24日
+
+nodejs cluster模块分析 https://segmentfault.com/a/1190000011737574 (从代码层面讲的,比较全面,回到了一个问题,为什么多个work进程可以同时监听相同的端口号)
+
+818 NodeJS的Cluster模块 https://www.jianshu.com/p/a1abf405edfc
