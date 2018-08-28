@@ -41,3 +41,5 @@ nodejs cluster模块分析 https://segmentfault.com/a/1190000011737574 (从代�
 深入浅出Node.js（六）：Buffer那些事儿 http://www.infoq.com/cn/articles/nodejs-about-buffer (朴灵的文章,提供了在fs.createReadStream有bufferSize的情况下,如何正确的读出中文)
 
 Nodejs进阶：核心模块Buffer常用API使用总结 https://www.cnblogs.com/chyingp/p/nodejs-learning-buffer.html (常用的BufferAPI的一些说明)
+
+NodeJS中被忽略的内存 https://segmentfault.com/a/1190000004934938 (内容基本和朴灵的深入浅出相同,其中说到Buffer的内存是不会被V8限制的,所以放到了Buffer这一节,当然文章中的其他部分,如内存限制和垃圾回收等也是干货满满)
