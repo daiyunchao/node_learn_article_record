@@ -47,10 +47,15 @@ NodeJS中被忽略的内存 https://segmentfault.com/a/1190000004934938 (内容�
 浅析nodejs的buffer类 https://cnodejs.org/topic/5189ff4f63e9f8a54207f60c (什么时候用buffer,什么时候不用buffer 比较详细和直观)
 
 Node.js缓冲模块Buffer:http://blog.fens.me/nodejs-buffer/ 
+
 1.Buffer的使用方式很像数组,但内存不是由v8分配
+
 2.文章写的时间比较早,使用了很多过期的方法
+
 3.每次我们创建一个新的Buffer实例时，都会检查当前Buffer的内存池是否已经满，当前内存池对于新建的Buffer实例是共享的，内存池的大小为8K
+
 4.当创建N个大小为4kb的Buffer实例的性能比创建N个大小位4.1kb的Buffer实例的性能高很多,原因在于2个4kb正好是8kb创建两个4kb的Buffer才分配内存,但4.1kb的每次都需要分配内存
+
 5.创建一个大Buffer保存数据会比创建多个小的Buffer保存数据效率高很多,也很好理解,少了很多计算当前内存是否够用和分配内存的时间
 
 
