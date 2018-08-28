@@ -39,3 +39,5 @@ nodejs cluster模块分析 https://segmentfault.com/a/1190000011737574 (从代�
 日期:2018年8月28日
 
 深入浅出Node.js（六）：Buffer那些事儿 http://www.infoq.com/cn/articles/nodejs-about-buffer (朴灵的文章,提供了在fs.createReadStream有bufferSize的情况下,如何正确的读出中文)
+
+Nodejs进阶：核心模块Buffer常用API使用总结 https://www.cnblogs.com/chyingp/p/nodejs-learning-buffer.html (常用的BufferAPI的一些说明)
