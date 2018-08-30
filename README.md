@@ -60,6 +60,8 @@ Node.js缓冲模块Buffer:http://blog.fens.me/nodejs-buffer/
 
 ## Node 中间件中的Next
 
+日期: 2018年8月30日
+
 #### 基本原理:
 
 对express中next函数的一些理解 https://cnodejs.org/topic/5757e80a8316c7cb1ad35bab
