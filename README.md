@@ -58,4 +58,12 @@ Node.js缓冲模块Buffer:http://blog.fens.me/nodejs-buffer/
 
 5.创建一个大Buffer保存数据会比创建多个小的Buffer保存数据效率高很多,也很好理解,少了很多计算当前内存是否够用和分配内存的时间
 
+## Node 中间件中的Next
+对express中next函数的一些理解 https://cnodejs.org/topic/5757e80a8316c7cb1ad35bab
+
+1.Next的作用是讲控制器交到下一个处理函数/中间件
+
+2.使用中间件可以串联处理很多逻辑,讲逻辑颗粒化,并且可复用,可定义全局中间件,也可定义指定路由的中间件.
+
+3.定义处理错误的中间件,当我们的next(err)的时候,内部程序会去找 类似于:app.use(err,req,res,next)的中间件,一定是4个参数的中间件,进行错误处理
 
