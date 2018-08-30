@@ -59,6 +59,9 @@ Node.js缓冲模块Buffer:http://blog.fens.me/nodejs-buffer/
 5.创建一个大Buffer保存数据会比创建多个小的Buffer保存数据效率高很多,也很好理解,少了很多计算当前内存是否够用和分配内存的时间
 
 ## Node 中间件中的Next
+
+#### 基本原理:
+
 对express中next函数的一些理解 https://cnodejs.org/topic/5757e80a8316c7cb1ad35bab
 
 1.Next的作用是讲控制器交到下一个处理函数/中间件
@@ -66,4 +69,32 @@ Node.js缓冲模块Buffer:http://blog.fens.me/nodejs-buffer/
 2.使用中间件可以串联处理很多逻辑,讲逻辑颗粒化,并且可复用,可定义全局中间件,也可定义指定路由的中间件.
 
 3.定义处理错误的中间件,当我们的next(err)的时候,内部程序会去找 类似于:app.use(err,req,res,next)的中间件,一定是4个参数的中间件,进行错误处理
+
+#### await的用法
+koa2 中间件里面的next到底是什么 http://www.cnblogs.com/cloud-/p/7239819.html
+
+1.下面是一段 koa-response-time 中间件的源代码:
+
+```
+/**
+ * Add X-Response-Time header field.
+ * @return {Function}
+ * @api public
+ */
+function responseTime() {
+  return async function responseTime(ctx, next) {
+    const start = Date.now();
+    await next();
+    const delta = Math.ceil(Date.now() - start);
+    ctx.set('X-Response-Time', delta + 'ms');
+  };
+}
+
+/**
+ * Expose `responseTime()`.
+ */
+module.exports = responseTime;
+
+```
+文章就解释了上面这段代码的执行原理
 
