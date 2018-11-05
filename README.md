@@ -110,3 +110,5 @@ module.exports = responseTime;
 #### 微服务
 什么是微服务架构？https://www.zhihu.com/question/65502802
 
+#### 简明解释算法中的大O符号
+http://blog.jobbole.com/55184/
